@@ -1,4 +1,4 @@
-# Federeated Search Requests
+# Query for Entities
 
 This section describes how the client can execute federated search requests. The service can return package, hotel, flight products. 
 
