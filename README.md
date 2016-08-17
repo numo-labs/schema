@@ -17,7 +17,7 @@ For Federated search, we will use streaming services. These streaming asynchrono
     "x-connectionId": "8t6GMkJAmgkws6qVAGCL"
   },
   "body": {
-    "foo":"a"
+    "foo":"a",
     "__bar":"b"
   }
 }
@@ -37,7 +37,7 @@ __Message Section:__
 * body: the body of the message,
 
 ```
-all body attributes starting with __ will be filtered out when send to the client
+all body attributes starting with __ will be filtered out when send to the client, in our example __bar will be removed. 
 ```
 
 ## Federated Search Messages
