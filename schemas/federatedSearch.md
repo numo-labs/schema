@@ -23,16 +23,29 @@ This section describes how the client can execute federated search requests. The
         "queries":[
             {
                 "label":"main",
-                "tags":["hotel:mhid.ao4f1g5","hotel:mhid.amase2r"],
-                "ranker":"default",
-                "limit":"100",
-                "entities":["package","tile","hotel"]
+                "entities":["package","hotel"],
+                query: {
+                    "tags":["hotel:mhid.ao4f1g5","hotel:mhid.amase2r"],
+                    "ranker":"default",
+                    "limit":"100"
+                }
+            },
+            {
+                "label":"main",
+                "entities":["tile"],
+                query: {
+                    "tags":["hotel:mhid.ao4f1g5","hotel:mhid.amase2r"],
+                    "ranker":"default",
+                    "limit":"10"
+                }
             },
             {
                 "label":"alternative",
-                "index":"popular",
-                "limit":10,
-                "entities":["hotel"]
+                "entities":["packages"],
+                query: {
+                    "ranker":"popular",
+                    "limit":"10"
+                }
             }
         ]
     }
