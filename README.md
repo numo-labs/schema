@@ -16,13 +16,9 @@ For Federated search, we will use streaming services. These streaming asynchrono
     "x-cliendId": "75010105537365102704845373651050168024",
     "x-connectionId": "8t6GMkJAmgkws6qVAGCL"
   },
-  "message": {
-    "body":{
-        "foo":"a"
-    },
-    "internal":{
-        "bar":"b"
-    }
+  "body": {
+    "foo":"a"
+    "__bar":"b"
   }
 }
 ```
@@ -38,8 +34,7 @@ __Header section:__
 
 __Message Section:__ 
 
-* body: the body of the message, data which is allowed to go over the connection between the client and the server
-* internal: this part of the message is for internal (server side only use) and will never be exposed to the client, this can be extremely useful if you only want to send a partial result to the client, but want to archive the full response. In our example "bar":"b" will never been send to the client. 
+* body: the body of the message, __all attributes starting with __ will be filtered out when send to the client__. 
 
 ## Federated Search Messages
 
