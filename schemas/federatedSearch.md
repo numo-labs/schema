@@ -18,9 +18,7 @@ This section describes how the client can execute federated search requests. The
             "id":"uk:oneweb:v1",
         },
         "customer": {
-            "anonymous": {
-                "id": "08a69bed-cd06-47b8-b759-33b95683aa79"
-            },
+            "id": "08a69bed-cd06-47b8-b759-33b95683aa79"
         },
         "federatedSearch":{
             "queries":[
@@ -34,7 +32,7 @@ This section describes how the client can execute federated search requests. The
                 {
                     "label":"alternative",
                     "index":"popular",
-                    "limit":10
+                    "limit":10,
                     "entities":["hotel"]
                 }
             ]
