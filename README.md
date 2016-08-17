@@ -34,7 +34,11 @@ __Header section:__
 
 __Message Section:__ 
 
-* body: the body of the message, __all attributes starting with __ will be filtered out when send to the client__. 
+* body: the body of the message,
+
+```
+all body attributes starting with __ will be filtered out when send to the client
+```
 
 ## Federated Search Messages
 
