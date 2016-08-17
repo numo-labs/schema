@@ -8,7 +8,7 @@ Sample Request:
 
 Sample Response Messages: 
 
-
+```JSON
 {
     "header": {
         "messageId": "afb99815-0004-4530-8581-a4aaffb92904",
@@ -29,3 +29,4 @@ Sample Response Messages:
     
     }
 }
+```
