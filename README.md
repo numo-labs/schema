@@ -40,3 +40,9 @@ __Message Section:__
 
 * body: the body of the message, data which is allowed to go over the connection between the client and the server
 * internal: this part of the message is for internal (server side only use) and will never be exposed to the client, this can be extremely useful if you only want to send a partial result to the client, but want to archive the full response. In our example "bar":"b" will never been send to the client. 
+
+## Federated Search Messages
+
+### Requests
+* [Federated Search Message](./docs/messages/federatedSearch.md)
+
