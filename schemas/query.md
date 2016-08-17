@@ -57,7 +57,9 @@ __Message Section:__
 
 * body: the body of the message, data which is allowed to go over the connection between the client and the server
 * body.customer: a customer object, as a search always happens for a "customer" we include the customer object, a customer can also be an anonymous user, as shown here above. see [Customer]() Entity for more information.
-* body.queries: an array of queries which will be executed by the backend service. Each query will be executed and results will be streamed back, and the correlationId will be extended to the following format: {x-correlationId}#{label} here in this example thus for all responses regarding the first query, _"x-correlationId": "afb99815-0004-4530-8581-a4aaffb92904#main"_, and for the second query _"x-correlationId": "afb99815-0004-4530-8581-a4aaffb92904#alternative"_,
+* body.queries: an array of queries which will be executed by the backend service. Each query will be executed and results will be streamed back, and the correlationId will be extended to the following format: {x-correlationId}#{label} here in this example:
+    * first query responses: _"x-correlationId": "afb99815-0004-4530-8581-a4aaffb92904#main"_
+    * second query responses: _"x-correlationId": "afb99815-0004-4530-8581-a4aaffb92904#alternative"_
 
 ### Related Entities
 * Channel               
