@@ -16,7 +16,7 @@ For Federated search, we will use streaming services. These streaming asynchrono
     "x-cliendId": "75010105537365102704845373651050168024",
     "x-connectionId": "8t6GMkJAmgkws6qVAGCL"
   },
-  "message: {
+  "message": {
     "body":{
         "foo":"a"
     },
