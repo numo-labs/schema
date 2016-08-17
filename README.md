@@ -44,5 +44,5 @@ __Message Section:__
 ## Federated Search Messages
 
 ### Requests
-* [Federated Search Message](./docs/messages/federatedSearch.md)
+* [Federated Search Message](./schemas/federatedSearch.md)
 
