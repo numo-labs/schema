@@ -11,19 +11,24 @@ For Federated search, we will use streaming services. These streaming asynchrono
 {
   "header": {
     "messageId": "afb99815-0004-4530-8581-a4aaffb92904",
-    "messageType": "searchReq.v1",
+    "messageType": "package.v1",
     "x-correlationId": "afb99815-0004-4530-8581-a4aaffb92904",
     "x-cliendId": "75010105537365102704845373651050168024",
     "x-connectionId": "8t6GMkJAmgkws6qVAGCL"
   },
-  "message:: {
-    "body":{}
+  "message: {
+    "body":{
+        "foo":"a"
+    },
+    "internal":{
+        "bar":"b"
+    }
   }
 }
 ```
-Each message must be wrapped in the above envelope and has to contain a few basic fields. 
+Each message MUST be wrapped in the above envelope and MUST contain a few basic fields. 
 
-Header section: 
+__Header section:__
 
 * messageId: (Required) A client side generated unique id.
 * messageType: (Required) Type of message here for exapmple a searchRequest message.
@@ -31,6 +36,7 @@ Header section:
 * x-clientId: (Optional) In case of a request, we need a client Id to be able to send messages back to the correct client
 * x-connectionId: (Optional) In case of a request, we need a connection Id to be able to send messages back to the correct connection for the client, we assume the client can have multiple connections open to the same server. 
 
-Body Section: 
+__Message Section:__ 
 
-* public 
+* body: the body of the message, data which is allowed to go over the connection between the client and the server
+* internal: this part of the message is for internal (server side only use) and will never be exposed to the client, this can be extremely useful if you only want to send a partial result to the client, but want to archive the full response. In our example "bar":"b" will never been send to the client. 
